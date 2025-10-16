@@ -1,0 +1,24 @@
+package com.crm.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class ResourceNotFoundException extends RuntimeException {
+
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+
+    public static ResourceNotFoundException forSeller(Long id) {
+        return new ResourceNotFoundException("Продавец с ID '" + id + "' не найден");
+    }
+
+    public static ResourceNotFoundException forTransaction(Long id) {
+        return new ResourceNotFoundException("Транзакция с ID '" + id + "' не найдена");
+    }
+
+    public static ResourceNotFoundException forSellerWithMessage(Long id, String additionalInfo) {
+        return new ResourceNotFoundException("Продавец с ID '" + id + "' не найден. " + additionalInfo);
+    }
+}
