@@ -69,7 +69,7 @@ CRM System - это RESTful API для управления продавцами
 1. Клонируйте репозиторий:
     ```bash
     git clone https://github.com/Sweche21/CrmSystem.git
-    cd crm-system
+    cd CrmSystem
     ```
 
 
