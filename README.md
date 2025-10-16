@@ -68,7 +68,7 @@ CRM System - это RESTful API для управления продавцами
 ### Запуск с Docker
 1. Клонируйте репозиторий:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Sweche21/CrmSystem.git
     cd crm-system
     ```
 2. Запустите приложение:
